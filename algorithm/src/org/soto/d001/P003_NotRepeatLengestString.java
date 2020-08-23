@@ -32,9 +32,9 @@ public class P003_NotRepeatLengestString {
         int ans = 0;
         // 使用滑窗
         while (i < n && j < n) {
-            if(!charSet.contains(s.charAt(j))){
+            if (!charSet.contains(s.charAt(j))) {
                 charSet.add(s.charAt(j++));
-                ans = ans > j-i ? ans: j-i;
+                ans = ans > j - i ? ans : j - i;
             } else {
                 charSet.remove(s.charAt(i++));
             }
